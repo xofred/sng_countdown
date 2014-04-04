@@ -27,6 +27,7 @@
 	比赛人数 
 	<input type="text" style="color:red;width:50px" id="init"></input>人
 	<input type="button" id="btn_start" value="开始计时" onClick="timedCount();getValue();"></input> 
+	<input type="button" id="btn_reload" value="重新开局"></input> 
 	<input type="text" id="txt"></input> 
 	<p>
 	<div id="chips" style="color:yellow">筹码说明</div>
@@ -73,8 +74,8 @@
 	  </tr> 
 	  <tr style="color:#000;"> 
 	    <td bgcolor="#ffffff"  >5</td> 
-	    <td bgcolor="#ffffff"  >90</td> 
-	    <td bgcolor="#ffffff"  >165</td> 
+	    <td bgcolor="#ffffff"  >75</td> 
+	    <td bgcolor="#ffffff"  >150</td> 
 	    <td bgcolor="#ffffff"  >15</td> 
 	  </tr> 
 	  <tr style="color:#000;"> 
@@ -145,11 +146,7 @@
 	  </tr> 
 	</tbody> 
       </table> 
-      <img id="image" src="rf2.jpg" style="position:absolute; 
-      float:right; 
-      right:0px; 
-      bottom:0px; 
-      z-index:2;"></img>
+      
       <audio id="audio1" src="success.wav" controls="" preload="auto" autobuffer=""></audio> 
     </div> 
   </body> 

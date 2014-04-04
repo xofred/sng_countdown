@@ -15,11 +15,14 @@ $(document).ready(function (){
   $('table').css("font-size","large");
   $('#min').hide();
   $('#sec').hide();
+  $('#btn_reload').hide();
 });
 
 function getValue() {
   c_init = (document.getElementById('init').value) * 100;
   c = c_init;
+  $('#btn_start').hide();
+  $('#btn_reload').show();
 }
 
 function timedCount() {
@@ -41,6 +44,9 @@ function timedCount() {
     alert("是时候升级盲注了！");
     nextRound();
   }
+  $('#btn_reload').click(function() {
+    location.reload();
+  });
 }
 
 function stopCount() {
