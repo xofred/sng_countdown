@@ -19,10 +19,17 @@ $(document).ready(function (){
 });
 
 function getValue() {
-  c_init = (document.getElementById('init').value) * 100;
-  c = c_init;
-  $('#btn_start').hide();
-  $('#btn_reload').show();
+  var x = document.getElementById('init').value;
+  if (!x || isNaN(x) || x <= 0) {
+    alert("请输入比赛人数");
+    location.reload();
+  }
+  else {
+    c_init = x * 100;
+    c = c_init;
+    $('#btn_start').hide();
+    $('#btn_reload').show();
+  }
 }
 
 function timedCount() {
