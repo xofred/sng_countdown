@@ -16,6 +16,8 @@ $(document).ready(function (){
   $('#min').hide();
   $('#sec').hide();
   $('#btn_reload').hide();
+  $('#btn_continue').hide();
+  $('#btn_pause').hide();
 });
 
 function getValue() {
@@ -55,10 +57,14 @@ function timedCount() {
   $('#btn_reload').click(function() {
     location.reload();
   });
+  $('#btn_pause').show();
+  $('#btn_continue').hide();
 }
 
 function stopCount() {
   clearTimeout(t);
+  $('#btn_pause').hide();
+  $('#btn_continue').show();
 }
 
 function nextRound() {
