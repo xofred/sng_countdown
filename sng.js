@@ -29,6 +29,7 @@ function getValue() {
     c = c_init;
     $('#btn_start').hide();
     $('#btn_reload').show();
+    $('#input_number').hide();
   }
 }
 
