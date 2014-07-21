@@ -18,6 +18,20 @@ $(document).ready(function (){
   $('#btn_reload').hide();
   $('#btn_continue').hide();
   $('#btn_pause').hide();
+  $('#btn_final').hide();
+
+  $('#btn_reload').click(function() {
+    if (confirm("确定重新开局吗？")) {
+      location.reload();
+    }
+  });
+
+  $('#btn_final').click(function() {
+    if (confirm("确定开始单挑（时间减半）吗？")) {
+      c = Math.round(c / 2);
+      $('#btn_final').remove();
+    }
+  }); 
 });
 
 function getValue() {
@@ -54,11 +68,12 @@ function timedCount() {
     alert("是时候升级盲注了！");
     nextRound();
   }
-  $('#btn_reload').click(function() {
-    location.reload();
-  });
+
   $('#btn_pause').show();
   $('#btn_continue').hide();
+  if ($('btn_final')) {
+    $('#btn_final').show();
+  }
 }
 
 function stopCount() {
