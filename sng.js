@@ -43,7 +43,7 @@ function getValue() {
   else {
     c_init = x * 100;
     c = c_init;
-    if !$('#btn_final') {
+    if (!$('#btn_final')) {
       c = Math.round(c / 2);
     }
     $('#btn_start').hide();
@@ -93,7 +93,10 @@ function nextRound() {
     getValue();
     timedCount();
   } 
-  else alert("平局！？");
+  else {
+    alert("平局！？");
+    location.reload();
+  }
 }
 
 function EvalSound(soundobj) {
